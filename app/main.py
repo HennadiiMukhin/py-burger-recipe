@@ -37,7 +37,7 @@ class OneOf(Validator):
     def __init__(self, options: Any) -> None:
         self.options = options
 
-    def validate(self, value: Any) -> Any:
+    def validate(self, value: list) -> Any:
         if value not in self.options:
             raise ValueError(
                 f"Expected {value} to be one of ({self.options}).")
